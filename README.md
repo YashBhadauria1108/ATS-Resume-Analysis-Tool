@@ -1,203 +1,172 @@
-# ⚡ ATSPro — AI-Powered Resume Analyzer
+https://ats-resume-analysis-tool-1.onrender.com
 
-Built with **MERN Stack** + **Google Gemini AI**
+
+# 🚀 ATS-Enhanced Resume Analyzer  
+Built with MERN Stack + Google Gemini AI
+
+An AI-powered resume analysis platform designed to optimize resumes for Applicant Tracking Systems (ATS) and improve job matching accuracy.
 
 ---
 
-## 🚀 Features
+## 🌐 Live Deployment
 
-- 🤖 **Gemini AI Analysis** — Real AI-powered resume evaluation
-- 📊 **ATS Score** — Percentage match with job description
-- ✅ **Matched Keywords** — What you already have
-- ❌ **Missing Keywords** — Critical gaps to fill
-- 💡 **Smart Suggestions** — Actionable improvement tips
-- 📝 **Resume Summary** — AI-generated professional summary
-- 📋 **History Dashboard** — Track all your past analyses
-- 🔐 **Auth System** — JWT-based login/signup
+- 🔗 Frontend (Vercel): https://ats-resume-analysis-tool-rqq8.vercel.app 
+- 🔗 Backend (Render): https://ats-resume-analysis-tool-1.onrender.com  
+- 🌍 Full App: https://ats-resume-analysis-tool-rqq8.vercel.app
+
+---
+
+## ✨ Features
+
+- 🤖 AI-powered resume evaluation using Google Gemini  
+- 📊 ATS score based on job description match  
+- ✅ Matched keywords detection  
+- ❌ Missing keywords identification  
+- 💡 Smart improvement suggestions  
+- 📝 AI-generated professional summary  
+- 📋 Resume analysis history dashboard  
+- 🔐 Secure authentication (JWT-based)  
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Tech |
-|-------|------|
-| Frontend | React 18, React Router 6, CSS |
-| Backend | Node.js, Express 4 |
-| Database | MongoDB (Compass or Atlas) |
-| AI | Google Gemini 1.5 Flash |
-| Auth | JWT + bcryptjs |
-| Upload | Multer (memory storage) |
+Frontend: React 18, React Router 6, CSS  
+Backend: Node.js, Express  
+Database: MongoDB  
+AI: Google Gemini 1.5 Flash  
+Auth: JWT + bcryptjs  
+Upload: Multer  
 
 ---
 
-## 📦 Prerequisites — Install These First
+## 📦 Prerequisites
 
-1. **Node.js** (v18 or higher) → https://nodejs.org
-2. **MongoDB Compass** (for local DB) → https://mongodb.com/products/compass
-3. **VS Code** → https://code.visualstudio.com
-4. **Git** → https://git-scm.com
-
----
-
-## ⚙️ VS Code Setup — Step by Step
-
-### Step 1: Open the Project
-```
-File → Open Folder → Select "ATS-Enhanced"
-```
-
-### Step 2: Setup Backend
-
-Open VS Code terminal (`Ctrl + ~`) and run:
-
-```bash
-cd backend
-npm install
-```
-
-Create your `.env` file:
-```bash
-cp .env.example .env
-```
-
-Open `backend/.env` and fill in:
-```env
-MONGO_URI=mongodb://127.0.0.1:27017/ats_project
-GEMINI_API_KEY=your_key_here
-JWT_SECRET=any_random_string_here
-PORT=5000
-FRONTEND_URL=http://localhost:3000
-```
-
-Get Gemini API Key FREE at: https://aistudio.google.com/app/apikey
-
-Start backend:
-```bash
-npm run dev
-```
-✅ You should see: `🚀 Server running on port 5000` and `✅ MongoDB Connected`
-
-### Step 3: Setup Frontend
-
-Open a NEW terminal in VS Code (`Ctrl + Shift + ~`) and run:
-
-```bash
-cd frontend
-npm install
-```
-
-Create frontend `.env`:
-```bash
-cp .env.example .env
-```
-
-`frontend/.env` should contain:
-```env
-REACT_APP_API_URL=http://localhost:5000
-```
-
-Start frontend:
-```bash
-npm start
-```
-✅ Browser will open at `http://localhost:3000`
+- Node.js (v18+)  
+- MongoDB Compass or Atlas  
+- Git  
+- VS Code  
 
 ---
 
-## 🗄️ MongoDB Compass Connection
+## ⚙️ Local Setup
 
-1. Open **MongoDB Compass**
-2. In the connection string box, type: `mongodb://127.0.0.1:27017`
-3. Click **Connect**
-4. Database `ats_project` will appear automatically after first signup
-5. Collections: `users`, `resumes`
+### 1. Clone Repository
+
+git clone <your-repo-link>  
+cd ATS-Enhanced  
 
 ---
 
-## 🌐 Deploy to Vercel + Render
+### 2. Backend Setup
 
-### Backend → Render (Free)
+cd backend  
+npm install  
+cp .env.example .env  
 
-1. Push code to GitHub
-2. Go to https://render.com → New Web Service
-3. Connect your GitHub repo
-4. Set:
-   - **Root Directory:** `backend`
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-5. Add Environment Variables:
-   - `MONGO_URI` = your MongoDB Atlas URI
-   - `GEMINI_API_KEY` = your key
-   - `JWT_SECRET` = random string
-   - `FRONTEND_URL` = your Vercel URL (add after next step)
+Update `.env`:
 
-### MongoDB Atlas (for production)
-1. Go to https://mongodb.com/atlas
-2. Create free cluster
-3. Get connection string → use as `MONGO_URI` in Render
+MONGO_URI=mongodb://127.0.0.1:27017/ats_project  
+GEMINI_API_KEY=your_key_here  
+JWT_SECRET=your_secret_key  
+PORT=5000  
+FRONTEND_URL=http://localhost:3000  
 
-### Frontend → Vercel
+Run backend:
 
-1. Go to https://vercel.com → New Project
-2. Import your GitHub repo
-3. Set:
-   - **Root Directory:** `frontend`
-   - **Framework:** Create React App
-4. Add Environment Variable:
-   - `REACT_APP_API_URL` = your Render backend URL
+npm run dev  
+
+---
+
+### 3. Frontend Setup
+
+cd frontend  
+npm install  
+cp .env.example .env  
+
+Update `.env`:
+
+REACT_APP_API_URL=http://localhost:5000  
+
+Run frontend:
+
+npm start  
+
+---
+
+## 🗄️ MongoDB Setup
+
+- Open MongoDB Compass  
+- Connect to: mongodb://127.0.0.1:27017  
+- Database `ats_project` will be created automatically  
+
+---
+
+## ☁️ Deployment
+
+### Backend (Render)
+
+- Root Directory: backend  
+- Build Command: npm install  
+- Start Command: npm start  
+
+Environment Variables:
+
+MONGO_URI=<your_mongodb_atlas_uri>  
+GEMINI_API_KEY=<your_key>  
+JWT_SECRET=<your_secret>  
+FRONTEND_URL=<your_vercel_url>  
+
+---
+
+### Frontend (Vercel)
+
+- Root Directory: frontend  
+- Framework: Create React App  
+
+Environment Variable:
+
+REACT_APP_API_URL=<your_render_backend_url>  
 
 ---
 
 ## 📁 Project Structure
 
-```
-ATS-Enhanced/
-├── backend/
-│   ├── controllers/          (unused, logic is in routes)
-│   ├── models/
-│   │   ├── User.js           User schema
-│   │   └── Resume.js         Resume + analysis schema
-│   ├── routes/
-│   │   ├── auth.js           Login/Signup/Me endpoints
-│   │   └── upload.js         Resume upload + Gemini analysis
-│   ├── server.js             Main Express server
-│   ├── package.json
-│   └── .env.example          → Copy to .env
-│
-├── frontend/
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Home.jsx      Landing page
-│   │   │   ├── Upload.jsx    Resume upload + results
-│   │   │   ├── Dashboard.jsx History + stats
-│   │   │   ├── Login.jsx
-│   │   │   └── Signup.jsx
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Footer.jsx
-│   │   │   └── ProtectedRoute.jsx
-│   │   ├── styles/
-│   │   │   └── globals.css   Global design system
-│   │   ├── App.js
-│   │   └── index.js
-│   ├── package.json
-│   ├── vercel.json           Vercel SPA routing fix
-│   └── .env.example          → Copy to .env
-│
-└── README.md
-```
+ATS-Enhanced/  
+├── backend/  
+│   ├── models/  
+│   ├── routes/  
+│   ├── server.js  
+│   └── .env.example  
+│  
+├── frontend/  
+│   ├── src/  
+│   ├── public/  
+│   └── vercel.json  
+│  
+└── README.md  
 
 ---
 
 ## 🐛 Common Issues
 
-| Issue | Fix |
-|-------|-----|
-| `Cannot connect to server` | Make sure `npm run dev` is running in backend |
-| `MongoDB Connection Error` | Make sure MongoDB service is running / Compass is open |
-| `Gemini API key invalid` | Check your `.env` file — no quotes around the key |
-| `Only PDF files allowed` | Upload a valid PDF, not DOCX or image |
-| PDF text extract fails | PDF might be scanned image — use a text-based PDF |
-| Vercel 404 on refresh | `vercel.json` already handles this — redeploy |
+Server not connecting → Run backend properly  
+MongoDB error → Ensure MongoDB is running  
+Invalid API key → Check .env file  
+PDF upload fails → Use text-based PDF  
+Vercel 404 error → Ensure vercel.json exists  
+
+---
+
+## 🚀 Future Improvements
+
+- DOCX & image resume support  
+- Resume score visualization charts  
+- Job recommendation system  
+- AI cover letter generator  
+
+---
+
+## 📜 License
+
+MIT License
