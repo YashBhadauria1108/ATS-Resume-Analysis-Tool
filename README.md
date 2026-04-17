@@ -1,6 +1,3 @@
-https://ats-resume-analysis-tool-1.onrender.com
-
-
 # 🚀 ATS-Enhanced Resume Analyzer  
 Built with MERN Stack + Google Gemini AI
 
