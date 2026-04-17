@@ -1,4 +1,4 @@
-# 🚀 ATS-Enhanced Resume Analyzer  
+# 🚀 ATS-Resume-Analysis-Tool
 Built with MERN Stack + Google Gemini AI
 
 An AI-powered resume analysis platform designed to optimize resumes for Applicant Tracking Systems (ATS) and improve job matching accuracy.
