@@ -6,30 +6,28 @@ require("dotenv").config();
 const authRoutes = require("./routes/auth");
 const uploadRoutes = require("./routes/upload");
 
-const app = express();   // ✅ PEHLE app banao
+const app = express();
 
-// ✅ CORS (sirf ek baar use karo)
+// ✅ CORS
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+origin: process.env.FRONTEND_URL || "*",
+methods: ["GET", "POST", "PUT", "DELETE"],
+allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.json());
 
-// MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/ats_project";
-
-mongoose.connect(MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch((err) => {
-    console.error("❌ MongoDB Connection Error:", err.message);
-    process.exit(1);
-  });
+// ✅ MongoDB Connection (FIXED)
+mongoose.connect("mongodb://yash:12345@ac-mntenar-shard-00-00.cgblkah.mongodb.net:27017,ac-mntenar-shard-00-01.cgblkah.mongodb.net:27017,ac-mntenar-shard-00-02.cgblkah.mongodb.net:27017/?ssl=true&replicaSet=atlas-yk914t-shard-0&authSource=admin&appName=Cluster0")
+.then(() => console.log("✅ MongoDB Connected"))
+.catch((err) => {
+console.error("❌ MongoDB Connection Error:", err.message);
+process.exit(1);
+});
 
 // Health check
 app.get("/api/health", (req, res) => {
-  res.json({ status: "ok", message: "ATS Backend Running 🚀" });
+res.json({ status: "ok", message: "ATS Backend Running 🚀" });
 });
 
 // Routes
